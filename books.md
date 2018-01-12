@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "List of public books"
 ---
 
 {% for item in site.books %}

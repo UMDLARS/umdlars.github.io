@@ -20,15 +20,21 @@ layout: default
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>
-          <table>
-            <tr>
-              <th>Index:</th>
-            </tr>
-            {% for item in site.collections %}
-              <tr>
-                <td><a href="{{ site.baseurl }}/{{item.label}}/">{{ item.label }}</a></td>
+          <table class="table table-dark">
+            <thead>
+              <tr scope="col">
+                <th>Index:</th>
               </tr>
-            {% endfor %}
+            </thead>
+            <tbody>
+              {% for item in site.collections %}
+                {% assign desc = site.data.descriptors[item.label] %}
+                  <tr>
+                    <td><a class="" href="{{ site.baseurl }}/{{item.label}}/">{{ item.label }}</a></td>
+                      <td>Description: {{ desc.description }}</td>
+                  </tr>
+              {% endfor %}
+            </tbody>
           </table>
         </li>
       {% endfor %}

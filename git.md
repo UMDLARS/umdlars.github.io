@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "Git tips, tricks, and introduction"
 ---
 
 Table of Contents:
