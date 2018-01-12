@@ -30,6 +30,19 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections_dir: my_cols
+
+collections:
+    books:
+        output: true
+        #        permalink: /books/:path/
+    git:
+        output: true
+
+default:
+    values:
+        layout: page
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
