@@ -35,10 +35,10 @@ collections_dir: my_cols
 collections:
     books:
         output: true
-        permalink: /books/:path/
+        permalink: /:collection/:path/
     git:
         output: true
-        permalink: /git/:path/
+        permalink: /:collection/:path/
 
 default:
     values:
