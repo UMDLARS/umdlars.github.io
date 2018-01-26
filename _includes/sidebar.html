@@ -1,15 +1,25 @@
 <link rel="stylesheet" href="/assets/css/sidebar.css">
 
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  {% for item in site.collections %}
-    {% assign desc = site.data.descriptors[item.label] %}
-        <a class="" href="{{ site.baseurl }}/{{item.label}}/">{{ item.label }}</a>
-  {% endfor %}
-</div>
+<div class="nav-side-menu">
+    <div class="brand">UMDLars</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                <a href="#"><i class="fa fa-gift fa-lg"></i> Topics <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="products">
+              {% for item in site.collections %}
+                {% assign desc = site.data.descriptors[item.label] %}
+                  <li>  <a class="" href="{{ site.baseurl }}/{{item.label}}/">{{ item.label }}</a> </li>
+              {% endfor %}
+            </ul>
 
+        </ul>
+    </div>
+</div>
 
 <!-- Use any element to open the sidenav -->
 <button type="button" class="btn btn-primary" onclick="openNav()">SideBar</button>
- <script src="/assets/js/sidebar.js"></script> 
+ <script src="/assets/js/sidebar.js"></script>
